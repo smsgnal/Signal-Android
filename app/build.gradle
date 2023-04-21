@@ -72,6 +72,7 @@ def selectableVariants = [
         'playProdBenchmark',
         'playProdInstrumentation',
         'playProdRelease',
+        'playProdSmsgnal',
         'playStagingDebug',
         'playStagingCanary',
         'playStagingSpinner',
@@ -82,6 +83,7 @@ def selectableVariants = [
         'playStagingRelease',
         'websiteProdSpinner',
         'websiteProdRelease',
+        'playProdSMSgnal'
 ]
 
 android {
@@ -275,6 +277,15 @@ android {
             manifestPlaceholders = [mapsKey:getMapsKey()]
 
             buildConfigField "String", "BUILD_VARIANT_TYPE", "\"Debug\""
+        }
+
+        smsgnal {
+            initWith debug
+            isDefault false
+            minifyEnabled true
+            applicationIdSuffix ".smsgnal"
+            matchingFallbacks = ['debug']
+            buildConfigField "String", "BUILD_VARIANT_TYPE", "\"Smsgnal\""
         }
 
         instrumentation {

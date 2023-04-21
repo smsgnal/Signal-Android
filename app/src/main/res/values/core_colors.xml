@@ -13,6 +13,8 @@
     <color name="core_red_highlight">#ef5350</color>
     <color name="core_red_shade">#e51d0e</color>
 
+    <color name="core_red_icon">#640404</color>
+
     <color name="core_white">#ffffff</color>
     <color name="core_black">#000000</color>
 
