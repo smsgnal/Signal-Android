@@ -1,3 +1,29 @@
+# SMSgnal Overview
+
+THIS IS **NOT** AN OFFICIAL SIGNAL CLIENT - USE AT YOUR OWN RISK! PRs are very welcome.
+
+Upstream Signal Android has decided to drop support for SMS as of April 2023. This repo intends to be identical to mainstream Signal, but with support for SMS. This was created for my personal usage, but I wanted to share it because of the massive public outcry requesting that mainline Signal keep support for SMS. Hopefully others find this useful as well.
+
+Please note that there is no promise of any kind here; hopefully a community can grow around this project to suppport it until the Signal leadership can come to their senses. Please show your support for SMS in Signal Android by starring this repo.
+
+
+# Status
+
+As of:
+* April 23, 2023 the current version (6.19.1) appears fully functional.
+
+
+# Usage
+
+You will need to compile and install the APK yourself. Follow the steps here: https://web.archive.org/web/20230424035915/https://community.signalusers.org/t/building-signal-android/15485/4 from "anon61006462". Specifically, sections:
+* A. Setup the build environment and download the source code
+  * Use this repo's git url instead
+* E. Building and signing the APK
+  * The variant is called `playProdSmsgnal`
+  
+If you have any issues, please create an issue on this repo, **NOT** upstream.
+
+
 # Signal Android 
 
 Signal is a simple, powerful, and secure messenger.
