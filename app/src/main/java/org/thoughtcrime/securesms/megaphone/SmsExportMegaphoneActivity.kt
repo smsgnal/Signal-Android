@@ -55,8 +55,7 @@ class SmsExportMegaphoneActivity : PassphraseRequiredActivity() {
       binding.laterButton.visible = false
       binding.bullet1Text.setText(R.string.SmsRemoval_info_bullet_1_phase_3)
     } else {
-      val phase3Start = DateUtils.formatDateWithMonthAndDay(Locale.getDefault(), SignalStore.misc().smsPhase3Start)
-      binding.bullet1Text.text = getString(R.string.SmsRemoval_info_bullet_1_s, phase3Start)
+      binding.bullet1Text.text = "SMSgnal supports SMS"
 
       binding.headline.setText(R.string.SmsExportMegaphoneActivity__signal_will_no_longer_support_sms)
       binding.laterButton.setOnClickListener {

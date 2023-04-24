@@ -19,14 +19,6 @@ class SmsExportReminderSchedule(private val context: Context) : MegaphoneSchedul
 
   @WorkerThread
   override fun shouldDisplay(seenCount: Int, lastSeen: Long, firstVisible: Long, currentTime: Long): Boolean {
-    return if (Util.isDefaultSmsProvider(context)) {
-      when (SignalStore.misc().smsExportPhase) {
-        SmsExportPhase.PHASE_1 -> basicMegaphoneSchedule.shouldDisplay(seenCount, lastSeen, firstVisible, currentTime)
-        SmsExportPhase.PHASE_2 -> fullScreenSchedule.shouldDisplay(seenCount, lastSeen, firstVisible, currentTime)
-        SmsExportPhase.PHASE_3 -> showPhase3Megaphone
-      }
-    } else {
-      false
-    }
+    return false
   }
 }

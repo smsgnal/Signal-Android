@@ -42,8 +42,7 @@ class SmsRemovalInformationFragment : LoggingFragment() {
         }
       }
 
-      val phase3Start = DateUtils.formatDateWithMonthAndDay(Locale.getDefault(), SignalStore.misc().smsPhase3Start)
-      binding.bullet1Text.text = getString(R.string.SmsRemoval_info_bullet_1_s, phase3Start)
+      binding.bullet1Text.text = "SMSgnal supports SMS"
 
       binding.toolbar.setNavigationOnClickListener(goBackClickListener)
       binding.laterButton.setOnClickListener(goBackClickListener)
